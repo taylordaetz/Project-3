@@ -1,6 +1,6 @@
 # Project-3 Web-Scraping from eBay
 
-Project completed for CS40 Computing for the Web at Claremont McKenna College. Here is the [course project](https://github.com/mikeizbicki/cmc-csci040/tree/2022fall/project_03)
+Project completed for CS40 Computing for the Web at Claremont McKenna College. Here is the [course project](https://github.com/mikeizbicki/cmc-csci040/tree/2022fall/project_03).
 ## `eBay-dl.py`
 Overall, this python project compiles html data from eBay and converts it into JSON, which is easier to extract and plot. 
 
