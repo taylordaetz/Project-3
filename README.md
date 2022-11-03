@@ -2,9 +2,10 @@
 
 Project completed for CS40 Computing for the Web at Claremont McKenna College. Here is the [course project](https://github.com/mikeizbicki/cmc-csci040/tree/2022fall/project_03)
 ## `eBay-dl.py`
-Overall, this python project extracts html data from eBay and converts it into JSON. In doing this, I can better analyze the data within eBay in a dictionary of items; such as the item name, price, status, shipping, returns and number of items sold. 
+Overall, this python project compiles html data from eBay and converts it into JSON, which is easier to extract and plot. 
 
-I started this file by using argparse to be able to search for items from the command line. Then, I looped over the eBay webpages utilizing the search term item that was inputted from the command line. 
+I started this file by using argparse to be able to search for items on eBay's website from the command line. Then, I looped over the eBay webpages utilizing the search term item that was inputted from the command line. The html of eBay is downloaded using the requests library, and is processed using beautiful soup. Then, I looped over the items in the webpage to get the information I wanted as a dictionary of items: item name, price, status, shipping, returns and number of items sold.
+
 
 ## How to run `ebay-dl.py`
 In order to run the eBay program properly, one must write the json to a separate file. The json file is created with the name of the specific search term: 
