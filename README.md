@@ -20,7 +20,7 @@ The search term must be input into the command line in the python terminal for t
 
 ```
 taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'headphones'
-taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'water bottle'
+taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'laptop case'
 taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'backpack'
 ```
 
@@ -28,6 +28,6 @@ To export the data as a csv file, one must add a --csv command to the command li
 
 ```
 taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'headphones' --csv=True
-taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'water bottle' --csv=True
+taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'laptop case' --csv=True
 taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'backpack' --csv=True 
 ```
