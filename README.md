@@ -4,7 +4,7 @@ Project completed for CS40 Computing for the Web at Claremont McKenna College. H
 ## `eBay-dl.py`
 Overall, this python project compiles html data from eBay and converts it into JSON, which is easier to extract and plot. 
 
-I started this file by using argparse to be able to search for items on eBay's website from the command line. Then, I looped over the eBay webpages utilizing the search term item that was inputted from the command line. The html of eBay is downloaded using the requests library, and is processed using beautiful soup. Then, I looped over the items in the webpage to get the information I wanted as a dictionary of items: item name, price, status, shipping, returns and number of items sold.
+I started this file by using argparse to be able to search for items on eBay's website from the command line. Then, I looped over the eBay webpages utilizing the search term item that was inputted from the command line. The html of eBay is downloaded using the requests library, and is processed using beautiful soup. Then, I looped over the items in the webpage to get the information I wanted as a dictionary of items: `item name`, `price`, `status`, `shipping`, `returns` and `number of items sold`.
 
 
 ## How to run `ebay-dl.py`
@@ -25,7 +25,18 @@ taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'laptop case'
 taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'backpack'
 ```
 
-To export the data as a csv file, one must add a --csv command to the command line. This looks as follows: 
+To export the data as a csv file, I had to write the csv to a separate file. This looked like: 
+```
+if (args.csv): 
+    csv_header=list(items[0].keys())
+    csv_filename = args.search_term+'.csv'
+    with open(csv_filename, 'w', encoding ='utf-8') as f: 
+        writer = csv.DictWriter(f, fieldnames = csv_header)
+        writer.writeheader()
+        writer.writerows(items)
+```
+
+One must add a --csv command to the command line. This looks as follows: 
 
 ```
 taylordaetz@Taylors-MacBook-Air-3 project_3 % python3 ebay-dl.py 'headphones' --csv=True
